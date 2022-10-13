@@ -64,8 +64,8 @@ Creates a new movie in the movie table. `movie_id` is auto-incremented
 
 #### Response
 
-```
 Movie Successfully Added
+
 ```
 
 ### API 3
@@ -81,12 +81,14 @@ Returns a movie based on the movie ID
 #### Response
 
 ```
+
 {
-  movieId: 12,
-  directorId: 3,
-  movieName: "The Lord of the Rings",
-  leadActor: "Elijah Wood",
+movieId: 12,
+directorId: 3,
+movieName: "The Lord of the Rings",
+leadActor: "Elijah Wood",
 }
+
 ```
 
 ### API 4
@@ -102,16 +104,19 @@ Updates the details of a movie in the movie table based on the movie ID
 #### Request
 
 ```
+
 {
-  "directorId": 24,
-  "movieName": "Thor",
-  "leadActor": "Christopher Hemsworth"
+"directorId": 24,
+"movieName": "Thor",
+"leadActor": "Christopher Hemsworth"
 }
+
 ```
 
 #### Response
 
 ```
+
 Movie Details Updated
 
 ```
@@ -129,7 +134,9 @@ Deletes a movie from the movie table based on the movie ID
 #### Response
 
 ```
+
 Movie Removed
+
 ```
 
 ### API 6
@@ -145,14 +152,16 @@ Returns a list of all directors in the director table
 #### Response
 
 ```
-[
-  {
-    directorId: 1,
-    directorName: "Joe Johnston",
-  },
 
-  ...
+[
+{
+directorId: 1,
+directorName: "Joe Johnston",
+},
+
+...
 ]
+
 ```
 
 ### API 7
@@ -168,13 +177,15 @@ Returns a list of all movie names directed by a specific director
 #### Response
 
 ```
-[
-  {
-    movieName: "Captain Marvel",
-  },
 
-  ...
+[
+{
+movieName: "Captain Marvel",
+},
+
+...
 ]
+
 ```
 
 <br/>
@@ -184,3 +195,4 @@ Use `npm install` to install the packages.
 **Export the express instance using the default export syntax.**
 
 **Use Common JS module syntax.**
+```

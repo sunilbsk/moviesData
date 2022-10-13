@@ -25,15 +25,12 @@ initializeDBAndServer();
 //API GET METHOD - All movies List//
 
 app.get("/movies/", async (request, response) => {
-  const getMovie = `
+  const getMovieQuery = `
     SELECT 
      *
     FROM
-    movie 
-    ORDER BY
-    movie_id;`;
-
-  const dbResponse = await db.all(getMovie);
+      movie;`;
+  const dbResponse = await db.all(getMovieQuery);
   response.send(dbResponse);
 });
 
@@ -44,7 +41,7 @@ app.get("/movies/", async (request, response) => {
   const { directorId, movieName, leadActor } = movieDetails;
   const addMovie = `
      INSERT INTO 
-     movie(directorId,movieName,leadActor)
+     movie(director_id,movie_name,lead_actor)
      Values (
          "${directorId}",
          "${movieName}",
